@@ -11,10 +11,10 @@ contract QuizTest is Test {
     Quiz.Quiz_item q1;
 
     function setUp() public {
-       vm.deal(address(this), 100 ether);
-       quiz = new Quiz();
-       address(quiz).call{value: 5 ether}("");
-       q1 = quiz.getQuiz(1);
+        vm.deal(address(this), 100 ether);
+        quiz = new Quiz();
+        address(quiz).call{value: 5 ether}("");
+        q1 = quiz.getQuiz(1);
     }
 
     function testAddQuizACL() public {
